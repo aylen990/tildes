@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>¡Aprendamos sobre las Tildes!</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>¡Aprendamos sobre las Tildes!</h1>
+            <p class="subtitle">Un viaje interactivo al mundo de la acentuación en español</p>
+            <div class="floating-accent accent-1">á</div>
+            <div class="floating-accent accent-2">é</div>
+            <div class="floating-accent accent-3">í</div>
+        </header>
+        
+        <div class="tabs">
+            <button class="tab active" data-tab="reglas">Reglas Básicas</button>
+            <button class="tab" data-tab="practica">Práctica</button>
+            <button class="tab" data-tab="quiz">Quiz</button>
+        </div>
+        
+        <div class="content">
+            <!-- Reglas Básicas -->
+            <div class="tab-content active" id="reglas">
+                <div class="rules-card">
+                    <h3>¿Qué es una tilde?</h3>
+                    <p>La tilde (´) es un signo gráfico que se coloca sobre una vocal para indicar que esa sílaba debe pronunciarse con mayor intensidad. En español, la tilde tiene reglas específicas que determinan cuándo y dónde debe usarse.</p>
+                    <div class="example">
+                        Ejemplos: café, camión, lámpara, útil
+                    </div>
+                </div>
+                
+                <div class="rules-card">
+                    <h3>Palabras Agudas</h3>
+                    <p>Son aquellas cuya última sílaba es tónica (se pronuncia con mayor intensidad). Llevan tilde cuando <b style="color: green;">terminan en 'n', 's' o vocal.</b></p>
+                    <div class="example">
+                        Con tilde: camión, sofá, compás<br>
+                        Sin tilde: papel, reloj, robot
+                    </div>
+                </div>
+                
+                <div class="rules-card">
+                    <h3>Palabras Graves</h3>
+                    <p>Son aquellas cuya penúltima sílaba es tónica. Llevan tilde cuando  <b style="color: red;">NO</b>  terminan en 'n', 's' o vocal.</p>
+                    <div class="example">
+                        Con tilde: lápiz, cárcel, ángel<br>
+                        Sin tilde: casa, mesa, perro
+                    </div>
+                </div>
+                
+                <div class="rules-card">
+                    <h3>Palabras Esdrújulas</h3>
+                    <p>Son aquellas cuya antepenúltima sílaba es tónica (la tercera contando desde el final). <b style="color: green;">Siempre llevan tilde.</b></p>
+                    <div class="example">
+                        Ejemplos: pájaro, médico, brújula, sílaba
+                    </div>
+                </div>
+                
+                <div class="rules-card">
+                    <h3>Palabras Sobresdrújulas</h3>
+                    <p>Son aquellas en las que la sílaba tónica es anterior a la antepenúltima. <b style="color: green;">Siempre llevan tilde. </b></p>
+                    <div class="example">
+                        Ejemplos: díganoslo, cómpratelo, guárdamelo
+                    </div>
+                </div>
+                
+                <div class="rules-card">
+                    <h3>Tilde Diacrítica</h3>
+                    <p>Se usa para diferenciar palabras que se escriben igual pero tienen significados diferentes.</p>
+                    <div class="example">
+                        té (bebida) vs. te (pronombre)<br>
+                        sí (afirmación) vs. si (condicional)<br>
+                        tú (pronombre personal) vs. tu (posesivo)
+                    </div>
+                </div>
+                
+                <div class="rules-card">
+                    <h3>Hiatos y Diptongos</h3>
+                    <p>Un hiato es cuando dos vocales seguidas en una palabra se encuentran separadas en distintas sílabas. Un diptongo es la unión de dos vocales en una misma sílaba.</p>
+                    <div class="example">
+                        Hiato con tilde: María, día, baúl, país<br>
+                        Diptongo: aire, causa, deuda
+                    </div>
+                    <p>Las vocales cerradas (i, u) llevan tilde en un hiato cuando están junto a una vocal abierta (a, e, o), siempre que sobre ellas recaiga la fuerza de pronunciación.</p>
+                </div>
+            </div>
+            
+            <!-- Práctica -->
+            <div class="tab-content" id="practica">
+                <h2>Practica la identificación de tildes</h2>
+                <p>Selecciona las palabras que deberían llevar tilde según las reglas de acentuación.</p>
+                
+                <div class="score-container">
+                    <p>Puntuación: <span id="score">0</span> de <span id="total">0</span></p>
+                </div>
+                
+                <div class="practice-container">
+                    <h3>Palabras Agudas</h3>
+                    <div class="word-container" id="agudas">
+                        <div class="word" data-needs-tilde="true">cafe</div>
+                        <div class="word" data-needs-tilde="true">sofa</div>
+                        <div class="word" data-needs-tilde="false">reloj</div>
+                        <div class="word" data-needs-tilde="true">mani</div>
+                        <div class="word" data-needs-tilde="false">papel</div>
+                        <div class="word" data-needs-tilde="true">jardin</div>
+                        <div class="word" data-needs-tilde="true">ademas</div>
+                        <div class="word" data-needs-tilde="false">animal</div>
+                    </div>
+                </div>
+                
+                <div class="practice-container">
+                    <h3>Palabras Graves</h3>
+                    <div class="word-container" id="llanas">
+                        <div class="word" data-needs-tilde="false">casa</div>
+                        <div class="word" data-needs-tilde="true">dificil</div>
+                        <div class="word" data-needs-tilde="false">mesa</div>
+                        <div class="word" data-needs-tilde="true">arbol</div>
+                        <div class="word" data-needs-tilde="false">libro</div>
+                        <div class="word" data-needs-tilde="true">carcel</div>
+                        <div class="word" data-needs-tilde="false">amigo</div>
+                        <div class="word" data-needs-tilde="true">azucar</div>
+                    </div>
+                </div>
+                
+                <div class="practice-container">
+                    <h3>Palabras Esdrújulas y Sobresdrújulas</h3>
+                    <div class="word-container" id="esdrujulas">
+                        <div class="word" data-needs-tilde="true">pajaro</div>
+                        <div class="word" data-needs-tilde="true">telefono</div>
+                        <div class="word" data-needs-tilde="true">medico</div>
+                        <div class="word" data-needs-tilde="true">digamelo</div>
+                        <div class="word" data-needs-tilde="true">rapido</div>
+                        <div class="word" data-needs-tilde="true">ultimo</div>
+                        <div class="word" data-needs-tilde="true">celebre</div>
+                        <div class="word" data-needs-tilde="true">tragaselo</div>
+                    </div>
+                </div>
+                
+                <div class="practice-container">
+                    <h3>Tilde Diacrítica</h3>
+                    <div class="word-container" id="diacritica">
+                        <div class="word" data-needs-tilde="true">mi (nota musical)</div>
+                        <div class="word" data-needs-tilde="false">mi (posesivo)</div>
+                        <div class="word" data-needs-tilde="true">el (pronombre)</div>
+                        <div class="word" data-needs-tilde="false">el (artículo)</div>
+                        <div class="word" data-needs-tilde="true">tu (pronombre)</div>
+                        <div class="word" data-needs-tilde="false">tu (posesivo)</div>
+                        <div class="word" data-needs-tilde="true">si (afirmación)</div>
+                        <div class="word" data-needs-tilde="false">si (condicional)</div>
+                    </div>
+                </div>
+                
+                <button id="reset-practice" class="btn">Reiniciar Práctica</button>
+            </div>
+            
+            <!-- Quiz -->
+            <div class="tab-content" id="quiz">
+                <h2>Quiz sobre Tildes</h2>
+                <p>Pon a prueba tus conocimientos respondiendo a estas preguntas sobre las reglas de acentuación.</p>
+                
+                <div id="quiz-container">
+                    <!-- Las preguntas se cargarán desde JavaScript -->
+                </div>
+                
+                <button id="check-quiz" class="btn">Verificar Respuestas</button>
+                <button id="reset-quiz" class="btn btn-secondary" style="margin-left: 1rem;">Reiniciar Quiz</button>
+            </div>
+            
+            
+        </div>
+    </div>
+    
+<script src="script.js"></script>
+</body>
+</html>
+
